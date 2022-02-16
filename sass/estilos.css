@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+/* $color1: #3d431a;
+$color2: #4d5b2e;
+$color3: #7a9c48;
+$color4: #acc47c;
+$color5: #d22b2f;
+$color6: #fd681b;
+$color7: #fe9016; */
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Fjalla One", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f5f5;
+  line-height: 30px;
+  width: 100%;
+}
+
+header {
+  background-color: #5d155d;
+  padding-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+header .divH1Header {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: 100%;
+  font-size: 50px;
+}
+
+header .menu {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+header .header--div {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+/* menu inicio */
+.menu {
+  float: left;
+  width: 100%;
+  margin-top: 8px;
+  margin: 0 auto;
+}
+
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.menu a {
+  display: block;
+  padding: 0px 20px;
+  text-decoration: none;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  color: #f5f5f5;
+}
+
+.menu a:hover {
+  background-color: #f5f5f5;
+  color: #5d155d;
+}
+
+.menu .subMenu {
+  background-color: #5d155d;
+  display: none;
+  position: absolute;
+}
+
+.menu ul li a:hover + ul,
+.menu .subMenu:hover {
+  display: block;
+}
+
+/* menu final */
+/* heading inicio */
+h1 {
+  color: #f5f5f5;
+  text-align: center;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  word-spacing: 100px;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #5d155d;
+  text-align: center;
+  line-height: 80px;
+  font-size: 30px;
+}
+
+h3 {
+  color: #88757a;
+  line-height: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+
+h4 {
+  color: #0f152c;
+  text-align: center;
+  font-size: 20px;
+}
+
+h5,
+h6 {
+  color: #0f152c;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* heading final */
+/* formulario inicio */
+legend {
+  color: #0f152c;
+  text-decoration: none;
+}
+
+label {
+  color: #0f152c;
+}
+
+textarea {
+  resize: none;
+}
+
+fieldset {
+  border: none;
+  margin: 10px;
+}
+
+.divForm {
+  background-color: #93c46e;
+  border: #88757a 3px solid;
+  margin: 0 auto;
+}
+
+.secFormContacto {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.divForm {
+  background-color: #93c46e;
+  border: #88757a 3px solid;
+  margin: 0 auto;
+}
+
+.divForm fieldset {
+  text-align: left;
+}
+
+.divForm fieldset form input {
+  border: none;
+}
+
+.divForm fieldset form select {
+  border: none;
+}
+
+.divForm fieldset form textarea {
+  border: none;
+  width: 100%;
+  height: 150px;
+}
+
+/* index.html inicio */
+.secUltimoCorto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.divUltimoCorto {
+  width: 95%;
+}
+
+.articleVideoUltimoCorto {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.articleVideoUltimoCorto video {
+  width: 100%;
+}
+
+.articleVideoUltimoCorto h3 {
+  text-align: left;
+}
+
+.articleInfoUltimoCorto {
+  width: 100%;
+  margin: 3px 0px;
+  text-align: center;
+}
+
+.sectionPremios {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "text text" "form iframe";
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 10px;
+}
+
+.divPremios {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+  text-align: center;
+  padding: 10px;
+}
+
+.divForm {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: form;
+}
+
+.articleUbicacion {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: iframe;
+  border: #88757a 3px solid;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+}
+
+.articleUbicacion iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.sectionEquipo img {
+  width: 100%;
+  width: 400px;
+}
+
+.sectionNosotros {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+      grid-template-areas: "text" "equipo";
+}
+
+.articleProductora {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  border: #88757a 3px solid;
+  padding: 10px;
+}
+
+.sectionEquipo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: equipo;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-gap: 10px;
+      grid-template-areas: "card-1 card-2 card-3";
+}
+
+.card-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: card-1;
+}
+
+.card-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: card-2;
+}
+
+.card-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: card-3;
+}
+
+/* nosotros.html final */
+/* cortometrajes.html inicio */
+.articleCortos {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "corto-1" "corto-2" "corto-3";
+  width: 95%;
+  margin: 0 auto;
+}
+
+.articleCortos iframe {
+  width: 400px;
+  height: 300px;
+}
+
+.corto-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: corto-1;
+  width: 100%;
+}
+
+.corto2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: corto-2;
+  width: 100%;
+}
+
+.corto3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: corto-3;
+  width: 100%;
+}
+
+.sectionGaleria {
+  margin: 20px 0px;
+}
+
+.carousel-indicators li {
+  display: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none;
+}
+
+.carousel-inner img {
+  width: 95%;
+}
+
+/* cortometrajes.html final */
+/*footer inicio */
+footer span {
+  text-align: center;
+  color: #f5f5f5;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #f5f5f5;
+  background-color: #5d155d;
+  padding: 5px;
+}
+
+footer ul a img {
+  width: 30px;
+  height: 30px;
+}
+
+/* footer final */
+p {
+  color: #0f152c;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #5d155d;
+}
+
+/* media queries inicio */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .divUltimoCorto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: wrap column;
+            flex-flow: wrap column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+  }
+  .articleInfoUltimoCorto p {
+    font-size: smaller;
+    text-align: center;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .divPremios p {
+    font-size: smaller;
+  }
+  .divForm {
+    font-size: smaller;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    width: 90%;
+  }
+  .divForm fieldset {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  /* en index.html, el texto al lado del video y dsp el formulario al lado de la ubi */
+}
+
+/* cambiar el media queries de cortometrajes width: 90% */
+/*# sourceMappingURL=estilos.css.map */
