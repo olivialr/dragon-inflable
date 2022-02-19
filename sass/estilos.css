@@ -4,13 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
-/* $color1: #3d431a;
-$color2: #4d5b2e;
-$color3: #7a9c48;
-$color4: #acc47c;
-$color5: #d22b2f;
-$color6: #fd681b;
-$color7: #fe9016; */
 * {
   margin: 0%;
   padding: 0%;
@@ -118,6 +111,86 @@ header .header--div {
   display: block;
 }
 
+/* menu final */
+/* $color1: #0f152c;
+$color2: #231539;
+$color3: #361545;
+$color4: #5d155d;
+$color5: #93c46e;
+$color6: #f5f5f5;
+$color7: #88757a;
+$border: $color7 3px solid; */
+/* * {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Fjalla One", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $color6;
+  line-height: 30px;
+  width: 100%;
+} */
+/* header {
+  background-color: $color4;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+header .divH1Header {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+  font-size: 50px;
+}
+header .menu {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+header .header--div {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: center;
+  justify-self: center;
+}
+/* menu inicio */
+/* .menu {
+  float: left;
+  width: 100%;
+  margin-top: 8px;
+  margin: 0 auto;
+}
+.menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+.menu a {
+  display: block;
+  padding: 0px 20px;
+  text-decoration: none;
+  transition: all 500ms ease;
+  color: $color6;
+}
+.menu a:hover {
+  background-color: $color6;
+  color: $color4;
+}
+.menu .subMenu {
+  background-color: $color4;
+  display: none;
+  position: absolute;
+}
+.menu ul li a:hover + ul,
+.menu .subMenu:hover {
+  display: block;
+} */
 /* menu final */
 /* heading inicio */
 h1 {
@@ -427,11 +500,10 @@ fieldset {
   display: none;
 }
 
-.carousel-control-prev-icon,
+/* .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: none;
-}
-
+} */
 .carousel-inner img {
   width: 95%;
 }

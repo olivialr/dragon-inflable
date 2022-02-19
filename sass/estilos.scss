@@ -4,18 +4,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import "../partials/variables";
+@import "../partials/generales";
+@import "../partials/header";
 
-$color1: #0f152c;
+$border: $color7 3px solid;
+/* $color1: #0f152c;
 $color2: #231539;
 $color3: #361545;
 $color4: #5d155d;
 $color5: #93c46e;
 $color6: #f5f5f5;
 $color7: #88757a;
+$border: $color7 3px solid; */
 
-$border: $color7 3px solid;
-
-* {
+/* * {
   margin: 0%;
   padding: 0%;
   font-family: "Fjalla One", sans-serif;
@@ -27,8 +30,8 @@ body {
   background-color: $color6;
   line-height: 30px;
   width: 100%;
-}
-header {
+} */
+/* header {
   background-color: $color4;
   padding-top: 50px;
   display: grid;
@@ -54,7 +57,7 @@ header .header--div {
   justify-self: center;
 }
 /* menu inicio */
-.menu {
+/* .menu {
   float: left;
   width: 100%;
   margin-top: 8px;
@@ -85,7 +88,7 @@ header .header--div {
 .menu ul li a:hover + ul,
 .menu .subMenu:hover {
   display: block;
-}
+} */
 /* menu final */
 /* heading inicio */
 h1 {
