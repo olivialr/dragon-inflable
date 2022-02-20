@@ -27,7 +27,7 @@ a {
 
 header {
   background-color: #5d155d;
-  padding-top: 50px;
+  padding-top: 5%;
   display: grid;
   grid-template-columns: 100%;
   width: 100%;
@@ -297,7 +297,48 @@ fieldset {
   grid-area: card-3;
 }
 
-/*footer inicio */
+.articleCortos {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "corto-1" "corto-2" "corto-3";
+  width: 95%;
+  margin: 0 auto;
+}
+.articleCortos iframe {
+  width: 400px;
+  height: 300px;
+}
+
+.corto-1 {
+  grid-area: corto-1;
+  width: 100%;
+}
+
+.corto2 {
+  grid-area: corto-2;
+  width: 100%;
+}
+
+.corto3 {
+  grid-area: corto-3;
+  width: 100%;
+}
+
+.sectionGaleria {
+  margin: 20px 0px;
+}
+
+.carousel-indicators li {
+  display: none;
+}
+
+.carousel-inner img {
+  width: 95%;
+}
+
 footer span {
   text-align: center;
   color: #f5f5f5;
@@ -316,9 +357,8 @@ footer ul a img {
   height: 30px;
 }
 
-/* footer final */
-/* media queries inicio */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
+  /* header */
   .menu ul {
     display: flex;
     flex-wrap: wrap;
@@ -359,9 +399,6 @@ footer ul a img {
   .divForm fieldset {
     width: 100%;
   }
-}
-@media only screen and (min-width: 769px) {
-  /* en index.html, el texto al lado del video y dsp el formulario al lado de la ubi */
 }
 /* cambiar el media queries de cortometrajes width: 90% */
 
