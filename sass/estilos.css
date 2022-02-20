@@ -4,13 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
-/* $color1: #3d431a;
-$color2: #4d5b2e;
-$color3: #7a9c48;
-$color4: #acc47c;
-$color5: #d22b2f;
-$color6: #fd681b;
-$color7: #fe9016; */
 * {
   margin: 0%;
   padding: 0%;
@@ -29,7 +22,7 @@ body {
 
 header {
   background-color: #5d155d;
-  padding-top: 50px;
+  padding-top: 5%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
@@ -126,7 +119,7 @@ h1 {
   letter-spacing: 20px;
   text-transform: uppercase;
   word-spacing: 100px;
-  font-size: 35px;
+  font-size: 60%;
   margin-bottom: 30px;
 }
 
@@ -134,14 +127,14 @@ h2 {
   color: #5d155d;
   text-align: center;
   line-height: 80px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h3 {
   color: #88757a;
   line-height: 20px;
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 h4 {
@@ -162,6 +155,7 @@ h6 {
 legend {
   color: #0f152c;
   text-decoration: none;
+  font-size: 20px;
 }
 
 label {
@@ -277,13 +271,20 @@ fieldset {
   -ms-grid-column: 1;
   grid-area: text;
   text-align: center;
-  padding: 10px;
 }
 
 .divForm {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: form;
+}
+
+.divFormIndex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
 }
 
 .articleUbicacion {
@@ -427,11 +428,10 @@ fieldset {
   display: none;
 }
 
-.carousel-control-prev-icon,
+/* .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: none;
-}
-
+} */
 .carousel-inner img {
   width: 95%;
 }
@@ -469,6 +469,19 @@ a {
 
 /* media queries inicio */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
+  /* generales */
+  .divH1Header h1 {
+    word-spacing: 0px;
+    letter-spacing: 10px;
+  }
+  h2, h3 {
+    font-size: 20px;
+    line-height: 10px;
+    margin-top: 30px;
+  }
+  h4 {
+    font-size: 20px;
+  }
   .menu ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -480,6 +493,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  /* index.html */
   .divUltimoCorto {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -493,20 +507,24 @@ a {
     -ms-flex-line-pack: distribute;
         align-content: space-around;
   }
-  .articleInfoUltimoCorto p {
-    font-size: smaller;
-    text-align: center;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
+  .sectionPremios {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: 100%;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
   }
-  h4 {
-    font-size: 20px;
+  .sectionPremios .divPremios p {
+    font-size: small;
   }
-  .divPremios p {
-    font-size: smaller;
+  .sectionPremios .articleUbicacion h3 {
+    margin-top: 10px;
   }
   .divForm {
     font-size: smaller;
@@ -518,13 +536,13 @@ a {
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    width: 90%;
   }
   .divForm fieldset {
     width: 100%;
   }
 }
 
+/* fin media queries */
 @media only screen and (min-width: 769px) {
   /* en index.html, el texto al lado del video y dsp el formulario al lado de la ubi */
 }
