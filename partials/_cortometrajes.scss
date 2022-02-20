@@ -1,0 +1,38 @@
+.articleCortos {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "corto-1"
+    "corto-2"
+    "corto-3";
+  width: 95%;
+  margin: 0 auto;
+  iframe {
+    width: 400px;
+    height: 300px;
+  }
+}
+.corto-1 {
+  grid-area: corto-1;
+  width: 100%;
+}
+.corto2 {
+  grid-area: corto-2;
+  width: 100%;
+}
+.corto3 {
+  grid-area: corto-3;
+  width: 100%;
+}
+.sectionGaleria {
+  margin: 20px 0px;
+}
+.carousel-indicators li {
+  display: none;
+}
+.carousel-inner img {
+  width: 95%;
+}

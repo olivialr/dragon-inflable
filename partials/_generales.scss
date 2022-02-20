@@ -11,3 +11,11 @@ body {
   line-height: 30px;
   width: 100%;
 }
+p {
+  color: $color1;
+}
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: $color4;
+}
