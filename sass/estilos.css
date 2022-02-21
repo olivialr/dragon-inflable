@@ -20,50 +20,42 @@ body {
   width: 100%;
 }
 
+p {
+  color: #0f152c;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #5d155d;
+}
+
 header {
   background-color: #5d155d;
   padding-top: 5%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  width: 100%;
+      grid-template-areas: "titulo" "menu";
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   text-transform: uppercase;
   font-weight: lighter;
 }
 
 header .divH1Header {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
   -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  -ms-grid-column: 1;
+  grid-area: titulo;
   width: 100%;
   font-size: 50px;
 }
 
 header .menu {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3/4;
-}
-
-header .header--div {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
   -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  -ms-grid-column: 1;
+  grid-area: menu;
 }
 
 /* menu inicio */
@@ -111,7 +103,6 @@ header .header--div {
   display: block;
 }
 
-/* menu final */
 /* heading inicio */
 h1 {
   color: #f5f5f5;
@@ -152,31 +143,6 @@ h6 {
 
 /* heading final */
 /* formulario inicio */
-legend {
-  color: #0f152c;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-label {
-  color: #0f152c;
-}
-
-textarea {
-  resize: none;
-}
-
-fieldset {
-  border: none;
-  margin: 10px;
-}
-
-.divForm {
-  background-color: #93c46e;
-  border: #88757a 3px solid;
-  margin: 0 auto;
-}
-
 .secFormContacto {
   width: 95%;
   margin: 0 auto;
@@ -190,7 +156,19 @@ fieldset {
 }
 
 .divForm fieldset {
+  border: none;
+  margin: 10px;
   text-align: left;
+}
+
+.divForm fieldset legend {
+  color: #0f152c;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.divForm fieldset label {
+  color: #0f152c;
 }
 
 .divForm fieldset form input {
@@ -205,6 +183,7 @@ fieldset {
   border: none;
   width: 100%;
   height: 150px;
+  resize: none;
 }
 
 /* index.html inicio */
@@ -222,11 +201,11 @@ fieldset {
       justify-content: space-around;
 }
 
-.divUltimoCorto {
+.secUltimoCorto .divUltimoCorto {
   width: 95%;
 }
 
-.articleVideoUltimoCorto {
+.secUltimoCorto .divUltimoCorto .articleVideoUltimoCorto {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,18 +214,12 @@ fieldset {
       flex-wrap: wrap;
 }
 
-.articleVideoUltimoCorto video {
-  width: 100%;
-}
-
-.articleVideoUltimoCorto h3 {
+.secUltimoCorto .divUltimoCorto .articleVideoUltimoCorto h3 {
   text-align: left;
 }
 
-.articleInfoUltimoCorto {
+.secUltimoCorto .divUltimoCorto .articleVideoUltimoCorto video {
   width: 100%;
-  margin: 3px 0px;
-  text-align: center;
 }
 
 .sectionPremios {
@@ -266,20 +239,17 @@ fieldset {
   margin: 10px;
 }
 
-.divPremios {
+.sectionPremios .divPremios {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: text;
   text-align: center;
 }
 
-.divForm {
+.sectionPremios .divFormIndex {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: form;
-}
-
-.divFormIndex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,7 +257,7 @@ fieldset {
       align-content: space-around;
 }
 
-.articleUbicacion {
+.sectionPremios .articleUbicacion {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: iframe;
@@ -297,16 +267,12 @@ fieldset {
   width: 100%;
 }
 
-.articleUbicacion iframe {
+.sectionPremios .articleUbicacion iframe {
   width: 100%;
   height: 300px;
 }
 
-.sectionEquipo img {
-  width: 100%;
-  width: 400px;
-}
-
+/* nosotros.html */
 .sectionNosotros {
   display: -ms-grid;
   display: grid;
@@ -350,8 +316,8 @@ fieldset {
       align-self: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   -webkit-box-pack: center;
@@ -363,31 +329,33 @@ fieldset {
       grid-template-areas: "card-1 card-2 card-3";
 }
 
-.card-1 {
+.sectionNosotros .sectionEquipo .card-1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: card-1;
 }
 
-.card-2 {
+.sectionNosotros .sectionEquipo .card-2 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: card-2;
 }
 
-.card-3 {
+.sectionNosotros .sectionEquipo .card-3 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: card-3;
 }
 
-/* nosotros.html final */
-/* cortometrajes.html inicio */
+.sectionNosotros .sectionEquipo img {
+  width: 100%;
+  width: 400px;
+}
+
+/* cortometrajes.html */
 .articleCortos {
   display: -ms-grid;
   display: grid;
-  /* justify-content: center;
-  align-content: center; */
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   -ms-grid-rows: auto;
@@ -398,31 +366,33 @@ fieldset {
   margin: 0 auto;
 }
 
-.articleCortos iframe {
-  width: auto;
-  height: 500px;
-}
-
-.articleCortos .h3 {
-  grid-area: texto;
-}
-
 .articleCortos .corto-1 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: corto-1;
 }
 
-.articleCortos .corto2 {
+.articleCortos .corto-2 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: corto-2;
 }
 
-.articleCortos .corto3 {
+.articleCortos .corto-3 {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: corto-3;
+}
+
+.articleCortos h3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+}
+
+.articleCortos iframe {
+  width: auto;
+  height: 500px;
 }
 
 .articleCortos .card {
@@ -460,24 +430,21 @@ fieldset {
   grid-area: carousel;
 }
 
+.sectionGaleria .carousel .carousel-indicators li {
+  display: none;
+}
+
 .sectionGaleria .carousel .carousel-inner .carousel-item img {
-  width: 80%;
-}
-
-.carousel-indicators li {
-  display: none;
-}
-
-/* .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: none;
-} */
-.carousel-inner img {
   width: 95%;
 }
 
-/* cortometrajes.html final */
 /*footer inicio */
+footer {
+  background-color: #f5f5f5;
+  background-color: #5d155d;
+  padding: 5px;
+}
+
 footer span {
   text-align: center;
   color: #f5f5f5;
@@ -485,32 +452,15 @@ footer span {
   text-transform: uppercase;
 }
 
-footer {
-  background-color: #f5f5f5;
-  background-color: #5d155d;
-  padding: 5px;
-}
-
 footer ul a img {
   width: 30px;
   height: 30px;
 }
 
-/* footer final */
-p {
-  color: #0f152c;
-}
-
-a {
-  text-decoration: underline;
-  font-weight: bold;
-  color: #5d155d;
-}
-
 /* media queries inicio */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   /* generales */
-  .divH1Header h1 {
+  h1 {
     word-spacing: 0px;
     letter-spacing: 10px;
   }
@@ -563,10 +513,7 @@ a {
   .sectionPremios .divPremios p {
     font-size: small;
   }
-  .sectionPremios .articleUbicacion h3 {
-    margin-top: 10px;
-  }
-  .divForm {
+  .sectionPremios .divForm {
     font-size: smaller;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -577,8 +524,11 @@ a {
     -ms-flex-line-pack: center;
         align-content: center;
   }
-  .divForm fieldset {
+  .sectionPremios .divForm fieldset {
     width: 100%;
+  }
+  .sectionPremios .articleUbicacion h3 {
+    margin-top: 10px;
   }
   /*cortometrajes*/
   .sectionCortometrajes .articleCortos h3 {
@@ -621,11 +571,4 @@ a {
             flex-direction: column;
   }
 }
-
-/* fin media queries */
-@media only screen and (min-width: 769px) {
-  /* en index.html, el texto al lado del video y dsp el formulario al lado de la ubi */
-}
-
-/* cambiar el media queries de cortometrajes width: 90% */
 /*# sourceMappingURL=estilos.css.map */

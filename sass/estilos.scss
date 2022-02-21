@@ -12,7 +12,6 @@ $color4: #5d155d;
 $color5: #93c46e;
 $color6: #f5f5f5;
 $color7: #88757a;
-
 $border: $color7 3px solid;
 
 * {
@@ -28,30 +27,33 @@ body {
   line-height: 30px;
   width: 100%;
 }
+p {
+  color: $color1;
+}
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: $color4;
+}
 header {
   background-color: $color4;
   padding-top: 5%;
   display: grid;
-  grid-template-columns: 100%;
-  width: 100%;
+  grid-template-areas:
+                      "titulo"
+                      "menu";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   text-transform: uppercase;
   font-weight: lighter;
-}
-header .divH1Header {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  width: 100%;
-  font-size: 50px;
-}
-header .menu {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-header .header--div {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  align-self: center;
-  justify-self: center;
+  .divH1Header {
+    grid-area: titulo;
+    width: 100%;
+    font-size: 50px;
+  }
+  .menu {
+    grid-area: menu;
+  }
 }
 /* menu inicio */
 .menu {
@@ -59,34 +61,33 @@ header .header--div {
   width: 100%;
   margin-top: 8px;
   margin: 0 auto;
-}
-.menu ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  align-content: center;
-}
-.menu a {
-  display: block;
-  padding: 0px 20px;
-  text-decoration: none;
-  transition: all 500ms ease;
-  color: $color6;
-}
-.menu a:hover {
-  background-color: $color6;
-  color: $color4;
-}
-.menu .subMenu {
-  background-color: $color4;
-  display: none;
-  position: absolute;
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-content: center;
+  }
+  a {
+    display: block;
+    padding: 0px 20px;
+    text-decoration: none;
+    transition: all 500ms ease;
+    color: $color6;
+    &:hover {
+      background-color: $color6;
+      color: $color4;
+    }
+    }
+  .subMenu {
+    background-color: $color4;
+    display: none;
+    position: absolute;
+  }
 }
 .menu ul li a:hover + ul,
-.menu .subMenu:hover {
-  display: block;
-}
-/* menu final */
+  .menu .subMenu:hover {
+    display: block;
+  }
 /* heading inicio */
 h1 {
   color: $color6;
@@ -122,26 +123,6 @@ h6 {
 }
 /* heading final */
 /* formulario inicio */
-legend {
-  color: $color1;
-  text-decoration: none;
-  font-size: 20px;
-}
-label {
-  color: $color1;
-}
-textarea {
-  resize: none;
-}
-fieldset {
-  border: none;
-  margin: 10px;
-}
-.divForm {
-  background-color: $color5;
-  border: $border;
-  margin: 0 auto;
-}
 .secFormContacto {
   width: 95%;
   margin: 0 auto;
@@ -152,7 +133,17 @@ fieldset {
   border: $border;
   margin: 0 auto;
   fieldset {
+    border: none;
+    margin: 10px;
     text-align: left;
+    legend {
+      color: $color1;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    label{
+      color: $color1;
+    }
     form {
       input {
         border: none;
@@ -164,75 +155,65 @@ fieldset {
         border: none;
         width: 100%;
         height: 150px;
+        resize: none;
       }
     }
   }
 }
-
 /* index.html inicio */
 .secUltimoCorto {
   display: flex;
   flex-flow: wrap column;
   align-content: space-around;
   justify-content: space-around;
-}
-.divUltimoCorto {
-  width: 95%;
-}
-.articleVideoUltimoCorto {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.articleVideoUltimoCorto video {
-  width: 100%;
-}
-.articleVideoUltimoCorto h3 {
-  text-align: left;
-}
-.articleInfoUltimoCorto {
-  width: 100%;
-  margin: 3px 0px;
-  text-align: center;
+  .divUltimoCorto {
+    width: 95%;
+    .articleVideoUltimoCorto {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      h3 {
+        text-align: left;
+      }
+      video {
+        width: 100%;
+      }
+    }
+  }
 }
 .sectionPremios {
   display: grid;
   grid-template-areas:
-    "text text"
-    "form iframe";
+                      "text text"
+                      "form iframe";
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   grid-gap: 10px;
   justify-content: center;
   align-content: center;
   margin: 10px;
+  .divPremios {
+    grid-area: text;
+    text-align: center;
+  }
+  .divFormIndex {
+    grid-area: form;
+    display: flex;
+    align-content: space-around;
+  }
+  .articleUbicacion {
+    grid-area: iframe;
+    border: $border;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
 }
-.divPremios {
-  grid-area: text;
-  text-align: center;
-}
-.divForm {
-  grid-area: form;
-}
-.divFormIndex{
-  display: flex;
-  align-content: space-around;
-}
-.articleUbicacion {
-  grid-area: iframe;
-  border: $border;
-  margin: 0 auto;
-  padding: 10px;
-  width: 100%;
-}
-.articleUbicacion iframe {
-  width: 100%;
-  height: 300px;
-}
-.sectionEquipo img {
-  width: 100%;
-  width: 400px;
-}
+/* nosotros.html */
 .sectionNosotros {
   display: grid;
   grid-template-columns: 100%;
@@ -260,30 +241,27 @@ fieldset {
     justify-self: center;
     align-self: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto;
     grid-template-rows: auto;
     justify-content: center;
     align-content: center;
     grid-gap: 10px;
-    grid-template-areas: "card-1 card-2 card-3";
+    grid-template-areas: 
+                        "card-1 card-2 card-3";
+    @each $numcard in 1, 2, 3{
+      .card-#{$numcard}{
+        grid-area: card-#{$numcard};
+      }
+    }
+    img {
+      width: 100%;
+      width: 400px;
+    }
   }
 }
-
-.card-1 {
-  grid-area: card-1;
-}
-.card-2 {
-  grid-area: card-2;
-}
-.card-3 {
-  grid-area: card-3;
-}
-/* nosotros.html final */
-/* cortometrajes.html inicio */
+/* cortometrajes.html */
 .articleCortos {
   display: grid;
-  /* justify-content: center;
-  align-content: center; */
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas:
@@ -294,21 +272,17 @@ fieldset {
   grid-gap: 10px;
   width: 95%;
   margin: 0 auto;
+  @each $numcorto in 1, 2, 3{
+    .corto-#{$numcorto}{
+      grid-area: corto-#{$numcorto};
+    }
+  }
+  h3{
+    grid-area: titulo;
+  }
   iframe {
     width: auto;
     height: 500px;
-  }
-  .h3{
-    grid-area: texto;
-  }
-  .corto-1 {
-    grid-area: corto-1;
-  }
-  .corto2 {
-    grid-area: corto-2;
-  }
-  .corto3 {
-    grid-area: corto-3;
   }
   .card{
     border: none;
@@ -334,60 +308,47 @@ fieldset {
   }
   .carousel{
     grid-area: carousel;
+    .carousel-indicators{
+      li {
+      display: none;
+    }
+    }
     .carousel-inner{
       .carousel-item{
         img{
-          width: 80%;
+          width: 95%;
         }
       }
     }
   }
 }
-.carousel-indicators li {
-  display: none;
-}
-/* .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: none;
-} */
-.carousel-inner img {
-  width: 95%;
-}
-/* cortometrajes.html final */
 /*footer inicio */
-footer span {
-  text-align: center;
-  color: $color6;
-  font-size: 10px;
-  text-transform: uppercase;
-}
-footer {
+footer{
   background-color: $color6;
   background-color: $color4;
   padding: 5px;
-}
-footer ul a img {
-  width: 30px;
-  height: 30px;
-}
-/* footer final */
-p {
-  color: $color1;
-}
-a {
-  text-decoration: underline;
-  font-weight: bold;
-  color: $color4;
+  span {
+    text-align: center;
+    color: $color6;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  ul{
+    a{
+      img{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 }
 /* media queries inicio */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   /* generales */
-  .divH1Header{
-    h1{
+  h1{
       word-spacing: 0px;
       letter-spacing: 10px;
     }
-  }
   h2, h3{
     font-size: 20px;
     line-height: 10px;
@@ -418,19 +379,19 @@ a {
     .divPremios p {
       font-size: small;
     }
+    .divForm {
+      font-size: smaller;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      fieldset {
+      width: 100%;
+      }
+    }
     .articleUbicacion{
       h3{
         margin-top: 10px;
       }
-    }
-  }
-  .divForm {
-    font-size: smaller;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    fieldset {
-    width: 100%;
     }
   }
   /*cortometrajes*/
@@ -466,9 +427,4 @@ a {
     display: flex !important; 
     flex-direction: column;
   }
-} /* fin media queries */
-@media only screen and (min-width: 769px) /* and (max-width: 1200px) */ {
-  /* en index.html, el texto al lado del video y dsp el formulario al lado de la ubi */
 }
-
-/* cambiar el media queries de cortometrajes width: 90% */

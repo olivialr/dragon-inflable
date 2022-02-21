@@ -20,33 +20,33 @@ body {
   width: 100%;
 }
 
+p {
+  color: #0f152c;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #5d155d;
+}
+
 header {
   background-color: #5d155d;
   padding-top: 5%;
   display: grid;
-  grid-template-columns: 100%;
-  width: 100%;
+  grid-template-areas: "titulo" "menu";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   text-transform: uppercase;
   font-weight: lighter;
 }
-
 header .divH1Header {
-  grid-column: 1/2;
-  grid-row: 1/2;
+  grid-area: titulo;
   width: 100%;
   font-size: 50px;
 }
-
 header .menu {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-
-header .header--div {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  align-self: center;
-  justify-self: center;
+  grid-area: menu;
 }
 
 /* menu inicio */
@@ -56,14 +56,12 @@ header .header--div {
   margin-top: 8px;
   margin: 0 auto;
 }
-
 .menu ul {
   display: flex;
   list-style: none;
   justify-content: center;
   align-content: center;
 }
-
 .menu a {
   display: block;
   padding: 0px 20px;
@@ -71,12 +69,10 @@ header .header--div {
   transition: all 500ms ease;
   color: #f5f5f5;
 }
-
 .menu a:hover {
   background-color: #f5f5f5;
   color: #5d155d;
 }
-
 .menu .subMenu {
   background-color: #5d155d;
   display: none;
@@ -88,7 +84,6 @@ header .header--div {
   display: block;
 }
 
-/* menu final */
 /* heading inicio */
 h1 {
   color: #f5f5f5;
@@ -129,31 +124,6 @@ h6 {
 
 /* heading final */
 /* formulario inicio */
-legend {
-  color: #0f152c;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-label {
-  color: #0f152c;
-}
-
-textarea {
-  resize: none;
-}
-
-fieldset {
-  border: none;
-  margin: 10px;
-}
-
-.divForm {
-  background-color: #93c46e;
-  border: #88757a 3px solid;
-  margin: 0 auto;
-}
-
 .secFormContacto {
   width: 95%;
   margin: 0 auto;
@@ -166,7 +136,17 @@ fieldset {
   margin: 0 auto;
 }
 .divForm fieldset {
+  border: none;
+  margin: 10px;
   text-align: left;
+}
+.divForm fieldset legend {
+  color: #0f152c;
+  text-decoration: none;
+  font-size: 20px;
+}
+.divForm fieldset label {
+  color: #0f152c;
 }
 .divForm fieldset form input {
   border: none;
@@ -178,6 +158,7 @@ fieldset {
   border: none;
   width: 100%;
   height: 150px;
+  resize: none;
 }
 
 /* index.html inicio */
@@ -187,29 +168,19 @@ fieldset {
   align-content: space-around;
   justify-content: space-around;
 }
-
-.divUltimoCorto {
+.secUltimoCorto .divUltimoCorto {
   width: 95%;
 }
-
-.articleVideoUltimoCorto {
+.secUltimoCorto .divUltimoCorto .articleVideoUltimoCorto {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-
-.articleVideoUltimoCorto video {
-  width: 100%;
-}
-
-.articleVideoUltimoCorto h3 {
+.secUltimoCorto .divUltimoCorto .articleVideoUltimoCorto h3 {
   text-align: left;
 }
-
-.articleInfoUltimoCorto {
+.secUltimoCorto .divUltimoCorto .articleVideoUltimoCorto video {
   width: 100%;
-  margin: 3px 0px;
-  text-align: center;
 }
 
 .sectionPremios {
@@ -222,39 +193,28 @@ fieldset {
   align-content: center;
   margin: 10px;
 }
-
-.divPremios {
+.sectionPremios .divPremios {
   grid-area: text;
   text-align: center;
 }
-
-.divForm {
+.sectionPremios .divFormIndex {
   grid-area: form;
-}
-
-.divFormIndex {
   display: flex;
   align-content: space-around;
 }
-
-.articleUbicacion {
+.sectionPremios .articleUbicacion {
   grid-area: iframe;
   border: #88757a 3px solid;
   margin: 0 auto;
   padding: 10px;
   width: 100%;
 }
-
-.articleUbicacion iframe {
+.sectionPremios .articleUbicacion iframe {
   width: 100%;
   height: 300px;
 }
 
-.sectionEquipo img {
-  width: 100%;
-  width: 400px;
-}
-
+/* nosotros.html */
 .sectionNosotros {
   display: grid;
   grid-template-columns: 100%;
@@ -280,32 +240,30 @@ fieldset {
   justify-self: center;
   align-self: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto;
   grid-template-rows: auto;
   justify-content: center;
   align-content: center;
   grid-gap: 10px;
   grid-template-areas: "card-1 card-2 card-3";
 }
-
-.card-1 {
+.sectionNosotros .sectionEquipo .card-1 {
   grid-area: card-1;
 }
-
-.card-2 {
+.sectionNosotros .sectionEquipo .card-2 {
   grid-area: card-2;
 }
-
-.card-3 {
+.sectionNosotros .sectionEquipo .card-3 {
   grid-area: card-3;
 }
+.sectionNosotros .sectionEquipo img {
+  width: 100%;
+  width: 400px;
+}
 
-/* nosotros.html final */
-/* cortometrajes.html inicio */
+/* cortometrajes.html */
 .articleCortos {
   display: grid;
-  /* justify-content: center;
-  align-content: center; */
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas: "titulo" "corto-1" "corto-2" "corto-3";
@@ -313,21 +271,21 @@ fieldset {
   width: 95%;
   margin: 0 auto;
 }
-.articleCortos iframe {
-  width: auto;
-  height: 500px;
-}
-.articleCortos .h3 {
-  grid-area: texto;
-}
 .articleCortos .corto-1 {
   grid-area: corto-1;
 }
-.articleCortos .corto2 {
+.articleCortos .corto-2 {
   grid-area: corto-2;
 }
-.articleCortos .corto3 {
+.articleCortos .corto-3 {
   grid-area: corto-3;
+}
+.articleCortos h3 {
+  grid-area: titulo;
+}
+.articleCortos iframe {
+  width: auto;
+  height: 500px;
 }
 .articleCortos .card {
   border: none;
@@ -353,57 +311,34 @@ fieldset {
 .sectionGaleria .carousel {
   grid-area: carousel;
 }
+.sectionGaleria .carousel .carousel-indicators li {
+  display: none;
+}
 .sectionGaleria .carousel .carousel-inner .carousel-item img {
-  width: 80%;
-}
-
-.carousel-indicators li {
-  display: none;
-}
-
-/* .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: none;
-} */
-.carousel-inner img {
   width: 95%;
 }
 
-/* cortometrajes.html final */
 /*footer inicio */
+footer {
+  background-color: #f5f5f5;
+  background-color: #5d155d;
+  padding: 5px;
+}
 footer span {
   text-align: center;
   color: #f5f5f5;
   font-size: 10px;
   text-transform: uppercase;
 }
-
-footer {
-  background-color: #f5f5f5;
-  background-color: #5d155d;
-  padding: 5px;
-}
-
 footer ul a img {
   width: 30px;
   height: 30px;
 }
 
-/* footer final */
-p {
-  color: #0f152c;
-}
-
-a {
-  text-decoration: underline;
-  font-weight: bold;
-  color: #5d155d;
-}
-
 /* media queries inicio */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   /* generales */
-  .divH1Header h1 {
+  h1 {
     word-spacing: 0px;
     letter-spacing: 10px;
   }
@@ -441,18 +376,17 @@ a {
   .sectionPremios .divPremios p {
     font-size: small;
   }
-  .sectionPremios .articleUbicacion h3 {
-    margin-top: 10px;
-  }
-
-  .divForm {
+  .sectionPremios .divForm {
     font-size: smaller;
     display: flex;
     justify-content: center;
     align-content: center;
   }
-  .divForm fieldset {
+  .sectionPremios .divForm fieldset {
     width: 100%;
+  }
+  .sectionPremios .articleUbicacion h3 {
+    margin-top: 10px;
   }
 
   /*cortometrajes*/
@@ -484,10 +418,5 @@ a {
     flex-direction: column;
   }
 }
-/* fin media queries */
-@media only screen and (min-width: 769px) {
-  /* en index.html, el texto al lado del video y dsp el formulario al lado de la ubi */
-}
-/* cambiar el media queries de cortometrajes width: 90% */
 
 /*# sourceMappingURL=estilos.css.map */
