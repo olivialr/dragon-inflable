@@ -267,7 +267,7 @@ fieldset {
 }
 
 .divPremios {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: text;
   text-align: center;
@@ -320,11 +320,17 @@ fieldset {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-      grid-template-areas: "text" "equipo";
+      grid-template-areas: "titulo" "text" "equipo";
 }
 
-.articleProductora {
+.sectionNosotros .h2 {
   -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+}
+
+.sectionNosotros .articleProductora {
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: text;
   text-align: center;
@@ -334,8 +340,8 @@ fieldset {
   padding: 10px;
 }
 
-.sectionEquipo {
-  -ms-grid-row: 2;
+.sectionNosotros .sectionEquipo {
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: equipo;
   -ms-grid-column-align: center;
@@ -380,48 +386,82 @@ fieldset {
 .articleCortos {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  /* justify-content: center;
+  align-content: center; */
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "corto-1" "corto-2" "corto-3";
+      grid-template-areas: "titulo" "corto-1" "corto-2" "corto-3";
+  grid-gap: 10px;
   width: 95%;
   margin: 0 auto;
 }
 
 .articleCortos iframe {
-  width: 400px;
-  height: 300px;
+  width: auto;
+  height: 500px;
 }
 
-.corto-1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: corto-1;
-  width: 100%;
+.articleCortos .h3 {
+  grid-area: texto;
 }
 
-.corto2 {
+.articleCortos .corto-1 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
+  grid-area: corto-1;
+}
+
+.articleCortos .corto2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: corto-2;
+}
+
+.articleCortos .corto3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: corto-3;
+}
+
+.articleCortos .card {
+  border: none;
   width: 100%;
 }
 
-.corto3 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: corto-3;
-  width: 100%;
+.articleCortos .card-body {
+  background-color: #93c46e;
+  margin-bottom: 10px;
 }
 
 .sectionGaleria {
   margin: 20px 0px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "titulo" "carousel";
+  grid-column: auto;
+  grid-row: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.sectionGaleria h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+}
+
+.sectionGaleria .carousel {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: carousel;
+}
+
+.sectionGaleria .carousel .carousel-inner .carousel-item img {
+  width: 80%;
 }
 
 .carousel-indicators li {
@@ -539,6 +579,46 @@ a {
   }
   .divForm fieldset {
     width: 100%;
+  }
+  /*cortometrajes*/
+  .sectionCortometrajes .articleCortos h3 {
+    margin-top: 10px;
+  }
+  .sectionCortometrajes .articleCortos .card .card-body {
+    padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .sectionCortometrajes .articleCortos .card .card-title {
+    margin: 0px;
+    padding-right: 5px;
+  }
+  .sectionCortometrajes .articleCortos .card .card-subtitle {
+    margin-bottom: 0px !important;
+    margin-top: 3px;
+  }
+  .sectionCortometrajes .articleCortos .card iframe {
+    height: 300px;
+  }
+  /* nosotros */
+  .sectionEquipo {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

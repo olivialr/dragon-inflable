@@ -262,10 +262,12 @@ fieldset {
   grid-gap: 10px;
   justify-content: center;
   align-content: center;
-  grid-template-areas: "text" "equipo";
+  grid-template-areas: "titulo" "text" "equipo";
 }
-
-.articleProductora {
+.sectionNosotros .h2 {
+  grid-area: titulo;
+}
+.sectionNosotros .articleProductora {
   grid-area: text;
   text-align: center;
   margin: 0 auto;
@@ -273,8 +275,7 @@ fieldset {
   border: #88757a 3px solid;
   padding: 10px;
 }
-
-.sectionEquipo {
+.sectionNosotros .sectionEquipo {
   grid-area: equipo;
   justify-self: center;
   align-self: center;
@@ -303,36 +304,57 @@ fieldset {
 /* cortometrajes.html inicio */
 .articleCortos {
   display: grid;
-  justify-content: center;
-  align-content: center;
+  /* justify-content: center;
+  align-content: center; */
   grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-template-areas: "corto-1" "corto-2" "corto-3";
+  grid-template-areas: "titulo" "corto-1" "corto-2" "corto-3";
+  grid-gap: 10px;
   width: 95%;
   margin: 0 auto;
 }
 .articleCortos iframe {
-  width: 400px;
-  height: 300px;
+  width: auto;
+  height: 500px;
 }
-
-.corto-1 {
+.articleCortos .h3 {
+  grid-area: texto;
+}
+.articleCortos .corto-1 {
   grid-area: corto-1;
-  width: 100%;
 }
-
-.corto2 {
+.articleCortos .corto2 {
   grid-area: corto-2;
+}
+.articleCortos .corto3 {
+  grid-area: corto-3;
+}
+.articleCortos .card {
+  border: none;
   width: 100%;
 }
-
-.corto3 {
-  grid-area: corto-3;
-  width: 100%;
+.articleCortos .card-body {
+  background-color: #93c46e;
+  margin-bottom: 10px;
 }
 
 .sectionGaleria {
   margin: 20px 0px;
+  display: grid;
+  grid-template-areas: "titulo" "carousel";
+  grid-column: auto;
+  grid-row: auto;
+  justify-content: space-around;
+  align-content: center;
+}
+.sectionGaleria h2 {
+  grid-area: titulo;
+}
+.sectionGaleria .carousel {
+  grid-area: carousel;
+}
+.sectionGaleria .carousel .carousel-inner .carousel-item img {
+  width: 80%;
 }
 
 .carousel-indicators li {
@@ -431,6 +453,35 @@ a {
   }
   .divForm fieldset {
     width: 100%;
+  }
+
+  /*cortometrajes*/
+  .sectionCortometrajes .articleCortos h3 {
+    margin-top: 10px;
+  }
+  .sectionCortometrajes .articleCortos .card .card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  .sectionCortometrajes .articleCortos .card .card-title {
+    margin: 0px;
+    padding-right: 5px;
+  }
+  .sectionCortometrajes .articleCortos .card .card-subtitle {
+    margin-bottom: 0px !important;
+    margin-top: 3px;
+  }
+  .sectionCortometrajes .articleCortos .card iframe {
+    height: 300px;
+  }
+
+  /* nosotros */
+  .sectionEquipo {
+    display: flex !important;
+    flex-direction: column;
   }
 }
 /* fin media queries */
