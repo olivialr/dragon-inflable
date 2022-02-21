@@ -9,14 +9,6 @@
 @import "../partials/cortometrajes";
 @import "../partials/footer";
 
-<<<<<<< HEAD
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  /* header */
-  .menu ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-=======
 $color1: #0f152c;
 $color2: #231539;
 $color3: #361545;
@@ -365,7 +357,6 @@ footer{
     font-size: 20px;
     line-height: 10px;
     margin-top: 30px;
->>>>>>> sin--partials
   }
   h4 {
     font-size: 20px;
@@ -435,16 +426,9 @@ footer{
       }
     }
   }
-<<<<<<< HEAD
-}
-@media only screen and (min-width: 769px) /* and (max-width: 1200px) */ {
-}
-/* cambiar el media queries de cortometrajes width: 90% */
-=======
 /* nosotros */
   .sectionEquipo{
     display: flex !important; 
     flex-direction: column;
   }
 }
->>>>>>> sin--partials
