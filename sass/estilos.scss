@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
-@import "../partials/variables";
+/* @import "../partials/variables";
 @import "../partials/generales";
 @import "../partials/header";
 @import "../partials/heading";
@@ -7,7 +7,7 @@
 @import "../partials/home";
 @import "../partials/nosotros";
 @import "../partials/cortometrajes";
-@import "../partials/footer";
+@import "../partials/footer"; */
 
 $color1: #0f152c;
 $color2: #231539;
@@ -236,11 +236,12 @@ h6 {
     grid-area: text;
     text-align: center;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     border: $border;
     padding: 10px;
   }
   .sectionEquipo {
+    width: 90%;
     grid-area: equipo;
     justify-self: center;
     align-self: center;
@@ -259,7 +260,6 @@ h6 {
     }
     img {
       width: 100%;
-      width: 400px;
     }
   }
 }
@@ -427,6 +427,24 @@ footer{
     }
   }
 /* nosotros */
+  .sectionEquipo{
+    display: flex !important; 
+    flex-direction: column;
+  }
+}
+.sectionGaleria{
+  .slide{
+    .carousel-inner{
+      .carousel-item{
+        img{
+        width: 70%;
+        margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
   .sectionEquipo{
     display: flex !important; 
     flex-direction: column;
