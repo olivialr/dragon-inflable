@@ -98,7 +98,7 @@ h1 {
   text-align: center;
   letter-spacing: 20px;
   text-transform: uppercase;
-  word-spacing: 100px;
+  /* word-spacing: 100px; */
   font-size: 60%;
   margin-bottom: 30px;
 }
@@ -352,6 +352,7 @@ footer{
   h1{
       word-spacing: 0px;
       letter-spacing: 10px;
+      font-size: 25px;
     }
   h2, h3{
     font-size: 20px;
