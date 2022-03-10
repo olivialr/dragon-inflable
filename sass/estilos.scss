@@ -330,7 +330,7 @@ h6 {
 footer{
   background-color: $color6;
   background-color: $color4;
-  padding: 5px;
+  padding: 5px 0px 5px 15px;
   span {
     text-align: center;
     color: $color6;
@@ -389,6 +389,7 @@ footer{
       display: flex;
       justify-content: center;
       align-content: center;
+      width: 100%;
       fieldset {
       width: 100%;
       }
@@ -428,6 +429,11 @@ footer{
     }
   }
 /* nosotros */
+  .sectionNosotros{
+    h3{
+      margin-top: 1rem;
+    }
+  }
   .sectionEquipo{
     display: flex !important; 
     flex-direction: column;

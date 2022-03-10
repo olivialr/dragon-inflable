@@ -446,7 +446,7 @@ h6 {
 footer {
   background-color: #f5f5f5;
   background-color: #5d155d;
-  padding: 5px;
+  padding: 5px 0px 5px 15px;
 }
 
 footer span {
@@ -528,6 +528,7 @@ footer ul a img {
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
+    width: 100%;
   }
   .sectionPremios .divForm fieldset {
     width: 100%;
@@ -566,6 +567,9 @@ footer ul a img {
     height: 300px;
   }
   /* nosotros */
+  .sectionNosotros h3 {
+    margin-top: 1rem;
+  }
   .sectionEquipo {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
