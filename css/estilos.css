@@ -102,7 +102,8 @@ h1 {
 h2 {
   color: #5d155d;
   text-align: center;
-  line-height: 80px;
+  /*   line-height: 80px; */
+  margin: 30px;
   font-size: 25px;
 }
 
@@ -226,18 +227,21 @@ h6 {
   grid-gap: 10px;
   justify-content: center;
   align-content: center;
-  grid-template-areas: "titulo" "text" "equipo";
+  grid-template-areas: "titulo-1" "productora" "titulo-2" "equipo";
 }
-.sectionNosotros .h2 {
-  grid-area: titulo;
+.sectionNosotros .h2-nosotros {
+  grid-area: titulo-1;
 }
 .sectionNosotros .articleProductora {
-  grid-area: text;
+  grid-area: productora;
   text-align: center;
   margin: 0 auto;
   width: 90%;
   border: #88757a 3px solid;
   padding: 10px;
+}
+.sectionNosotros .h2-titulo {
+  grid-area: titulo-2;
 }
 .sectionNosotros .sectionEquipo {
   width: 90%;
@@ -351,7 +355,7 @@ footer ul a img {
   h2, h3 {
     font-size: 20px;
     line-height: 10px;
-    margin-top: 30px;
+    /*     margin-top: 30px; */
   }
 
   h4 {

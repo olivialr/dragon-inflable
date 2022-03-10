@@ -105,7 +105,8 @@ h1 {
 h2 {
   color: $color4;
   text-align: center;
-  line-height: 80px;
+/*   line-height: 80px; */
+  margin: 30px;
   font-size: 25px;
 }
 h3 {
@@ -226,19 +227,23 @@ h6 {
   justify-content: center;
   align-content: center;
   grid-template-areas:
-                      "titulo"
-                      "text"
+                      "titulo-1"
+                      "productora"
+                      "titulo-2"
                       "equipo";
-  .h2{
-    grid-area: titulo;
+  .h2-nosotros{
+    grid-area: titulo-1;
   }
   .articleProductora {
-    grid-area: text;
+    grid-area: productora;
     text-align: center;
     margin: 0 auto;
     width: 90%;
     border: $border;
     padding: 10px;
+  }
+  .h2-titulo{
+    grid-area: titulo-2;
   }
   .sectionEquipo {
     width: 90%;
@@ -357,7 +362,7 @@ footer{
   h2, h3{
     font-size: 20px;
     line-height: 10px;
-    margin-top: 30px;
+/*     margin-top: 30px; */
   }
   h4 {
     font-size: 20px;
