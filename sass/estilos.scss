@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
-/* @import "../partials/variables";
-@import "../partials/generales";
-@import "../partials/header";
-@import "../partials/heading";
-@import "../partials/forms";
-@import "../partials/home";
-@import "../partials/nosotros";
-@import "../partials/cortometrajes";
-@import "../partials/footer"; */
 
 $color1: #0f152c;
 $color2: #231539;
@@ -98,14 +89,12 @@ h1 {
   text-align: center;
   letter-spacing: 20px;
   text-transform: uppercase;
-  /* word-spacing: 100px; */
   font-size: 60%;
   margin-bottom: 30px;
 }
 h2 {
   color: $color4;
   text-align: center;
-/*   line-height: 80px; */
   margin: 30px;
   font-size: 25px;
 }
@@ -126,7 +115,6 @@ h6 {
   font-weight: bold;
   text-align: center;
 }
-/* heading final */
 /* formulario inicio */
 .secFormContacto {
   width: 95%;
@@ -362,7 +350,6 @@ footer{
   h2, h3{
     font-size: 20px;
     line-height: 10px;
-/*     margin-top: 30px; */
   }
   h4 {
     font-size: 20px;
@@ -405,7 +392,7 @@ footer{
       }
     }
   }
-  /*cortometrajes*/
+  /* cortometrajes.html */
   .sectionCortometrajes{
     .articleCortos{
       h3{
@@ -433,7 +420,7 @@ footer{
       }
     }
   }
-/* nosotros */
+/* nosotros.html */
   .sectionNosotros{
     h3{
       margin-top: 1rem;
